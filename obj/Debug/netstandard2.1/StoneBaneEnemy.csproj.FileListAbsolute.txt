@@ -1,0 +1,8 @@
+C:\Projects\NewMobs_REPO\StoneBaneEnemy\bin\Debug\netstandard2.1\StoneBaneEnemy.deps.json
+C:\Projects\NewMobs_REPO\StoneBaneEnemy\bin\Debug\netstandard2.1\StoneBaneEnemy.dll
+C:\Projects\NewMobs_REPO\StoneBaneEnemy\obj\Debug\netstandard2.1\StoneBaneEnemy.csproj.AssemblyReference.cache
+C:\Projects\NewMobs_REPO\StoneBaneEnemy\obj\Debug\netstandard2.1\StoneBaneEnemy.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\NewMobs_REPO\StoneBaneEnemy\obj\Debug\netstandard2.1\StoneBaneEnemy.AssemblyInfoInputs.cache
+C:\Projects\NewMobs_REPO\StoneBaneEnemy\obj\Debug\netstandard2.1\StoneBaneEnemy.AssemblyInfo.cs
+C:\Projects\NewMobs_REPO\StoneBaneEnemy\obj\Debug\netstandard2.1\StoneBaneEnemy.csproj.CoreCompileInputs.cache
+C:\Projects\NewMobs_REPO\StoneBaneEnemy\obj\Debug\netstandard2.1\StoneBaneEnemy.dll
