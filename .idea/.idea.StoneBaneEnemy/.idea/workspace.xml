@@ -7,7 +7,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cde49d40-44e3-4cd8-a233-266023e23640" name="Changes" comment="" />
+    <list default="true" id="cde49d40-44e3-4cd8-a233-266023e23640" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.StoneBaneEnemy/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.StoneBaneEnemy/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AI/EnemyStoneBane.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AI/EnemyStoneBane.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AI/EnemyStoneBaneAnim.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AI/EnemyStoneBaneAnim.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/netstandard2.1/StoneBaneEnemy.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netstandard2.1/StoneBaneEnemy.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/netstandard2.1/StoneBaneEnemy.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netstandard2.1/StoneBaneEnemy.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/netstandard2.1/StoneBaneEnemy.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netstandard2.1/StoneBaneEnemy.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/netstandard2.1/StoneBaneEnemy.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netstandard2.1/StoneBaneEnemy.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/netstandard2.1/StoneBaneEnemy.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netstandard2.1/StoneBaneEnemy.dll" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,10 +25,28 @@
   <component name="DpaMonitoringSettings">
     <option name="firstShow" value="false" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Netflate&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Netflate/StoneBaneEnemy.git&quot;,
+    &quot;accountId&quot;: &quot;77ebd82c-4ffa-4d83-be57-7ce19cd34bf6&quot;
+  }
+}</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/AI/EnemyStoneBaneAnim.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Projects/NewMobs_REPO/StoneBaneEnemy/AI/EnemyStoneBaneAnim.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Projects/NewMobs_REPO/StoneBaneEnemy/AI/EnemyStoneBaneAnim.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Downloads/PuppetEnemy-main(1)/PuppetEnemy-main/My project/StoneBaneEnemy.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -27,6 +54,7 @@
   &quot;associatedIndex&quot;: 4
 }</component>
   <component name="ProjectId" id="2uxEzOQUuraASsZ1khcTE4mMBhx" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -35,6 +63,8 @@
   &quot;keyToString&quot;: {
     &quot;.NET Project.StoneBaneEnemy.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -94,13 +124,17 @@
       <workItem from="1743256786451" duration="4423000" />
       <workItem from="1743268122926" duration="8267000" />
       <workItem from="1743348272196" duration="5035000" />
-      <workItem from="1743433598790" duration="3899000" />
+      <workItem from="1743433598790" duration="8674000" />
+      <workItem from="1743473201137" duration="5246000" />
+      <workItem from="1743615958440" duration="600000" />
+      <workItem from="1743631450430" duration="277000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityProjectDiscoverer">
     <option name="hasUnityReference" value="true" />

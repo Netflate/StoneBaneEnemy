@@ -6,3 +6,4 @@ C:\Projects\NewMobs_REPO\StoneBaneEnemy\obj\Debug\netstandard2.1\StoneBaneEnemy.
 C:\Projects\NewMobs_REPO\StoneBaneEnemy\obj\Debug\netstandard2.1\StoneBaneEnemy.AssemblyInfo.cs
 C:\Projects\NewMobs_REPO\StoneBaneEnemy\obj\Debug\netstandard2.1\StoneBaneEnemy.csproj.CoreCompileInputs.cache
 C:\Projects\NewMobs_REPO\StoneBaneEnemy\obj\Debug\netstandard2.1\StoneBaneEnemy.dll
+C:\Projects\NewMobs_REPO\StoneBaneEnemy\obj\Debug\netstandard2.1\StoneBaneEnemy.sourcelink.json

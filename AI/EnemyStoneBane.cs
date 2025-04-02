@@ -22,10 +22,14 @@ public class EnemyStoneBane : MonoBehaviour
 		Stun = 10,
 		Leave = 11,
 		Despawn = 12,
-		HandSwingAttack = 13 
+		HandSwingAttack = 13,
+		HandSwingAttackTriggered = 14,
+		Grab = 15
 	}
 
 	public State currentState;
+	
+	public Transform visionTransform;
 
 	public float stateTimer;
 
@@ -77,6 +81,7 @@ public class EnemyStoneBane : MonoBehaviour
 
 	private int attacks;
 	
+	private bool attackImpulse;
 
 	private void Awake()
 	{
@@ -119,15 +124,6 @@ public class EnemyStoneBane : MonoBehaviour
 			case State.Sneak:
 				StateSneak();
 				break;
-			case State.ChargeAttack:
-				StateChargeAttack();
-				break;
-			case State.DelayAttack:
-				StateDelayAttack();
-				break;
-			case State.Attack:
-				StateAttack();
-				break;
 			case State.Stun:
 				StateStun();
 				break;
@@ -143,6 +139,32 @@ public class EnemyStoneBane : MonoBehaviour
 			}
 			RotationLogic();
 			TimerLogic();
+		}
+
+		if (currentState == State.HandSwingAttackTriggered && (bool)targetPlayer)
+		{
+			if (targetPlayer.isLocal)
+			{
+				PlayerController.instance.InputDisable(0.1f);
+				CameraAim.Instance.AimTargetSet(visionTransform.position, 0.1f, 5f, base.gameObject, 90);
+				CameraZoom.Instance.OverrideZoomSet(100f, 0.1f, 5f, 5f, base.gameObject, 50);
+				Color color = new Color(0.4f, 0f, 0f, 1f);
+				PostProcessing.Instance.VignetteOverride(color, 0.75f, 1f, 3.5f, 2.5f, 0.5f, base.gameObject);
+			}
+			if (attackImpulse)
+			{
+				if (targetPlayer.isLocal)
+				{
+					targetPlayer.physGrabber.ReleaseObject();
+					CameraGlitch.Instance.PlayLong();
+				}
+				attackImpulse = false;
+				animator.animator.SetTrigger("Attack");
+			}
+		}
+		else
+		{
+			attackImpulse = true;
 		}
 	}
 
@@ -267,9 +289,9 @@ public class EnemyStoneBane : MonoBehaviour
 		stateTimer -= Time.deltaTime;
 		if (stateTimer <= 0f)
 		{
-			if (Vector3.Distance(feetTransform.position, targetPlayer.transform.position) < 2.5f)
+			if (Vector3.Distance(feetTransform.position, targetPlayer.transform.position) < 2.0f)
 			{
-				UpdateState(State.ChargeAttack);
+				UpdateState(State.HandSwingAttack);
 			}
 			else
 			{
@@ -300,7 +322,7 @@ public class EnemyStoneBane : MonoBehaviour
 		}
 		else if (Vector3.Distance(feetTransform.position, enemy.NavMeshAgent.GetPoint()) < 2f && stateTimer > 1.5f)
 		{
-			UpdateState(State.ChargeAttack);
+			UpdateState(State.HandSwingAttack);
 		}
 	}
 
@@ -358,7 +380,7 @@ public class EnemyStoneBane : MonoBehaviour
 		stateTimer -= Time.deltaTime;
 		if (stateTimer <= 0f)
 		{
-			UpdateState(State.Attack);
+			UpdateState(State.HandSwingAttack);
 		}
 	}
 
@@ -372,11 +394,11 @@ public class EnemyStoneBane : MonoBehaviour
 			enemy.NavMeshAgent.ResetPath();
 			enemy.NavMeshAgent.Warp(enemy.Rigidbody.transform.position);
 		}
-		Quaternion quaternion = Quaternion.Euler(0f, Quaternion.LookRotation(targetPlayer.PlayerVisionTarget.VisionTransform.position - enemy.Rigidbody.transform.position).eulerAngles.y, 0f);
-		base.transform.rotation = Quaternion.Slerp(base.transform.rotation, quaternion, 50f * Time.deltaTime);
 		stateTimer -= Time.deltaTime;
 		if (stateTimer <= 0f)
 		{
+			Debug.Log("I'm attacking fuah fuah fuah");
+			animator.animator.SetTrigger("HandSwinging");
 			if (attacks >= 3 || Random.Range(0f, 1f) <= 0.1f)
 			{
 				attacks = 0;

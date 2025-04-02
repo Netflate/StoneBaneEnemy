@@ -268,6 +268,27 @@ public class EnemyStoneBaneAnim : MonoBehaviour
 		springArmRSource.rotation = SemiFunc.SpringQuaternionGet(springArmR, springArmRTarget.transform.rotation);
 	}
 
+	public void CheckForGrab()
+	{
+		// this will be called at the end of the swinging animation
+		Debug.Log("Checking grab");
+	}
+	
+	public void OnSwingComplete()
+	{
+		// Called at end of swing animation
+		if (controller.currentState == EnemyStoneBane.State.Grab)
+		{
+			//StartCrushing();
+			Debug.Log("start crushing");
+		}
+		else
+		{
+			Debug.Log("Back to idle");
+		}
+	}
+	
+	
 	public void Despawn()
 	{
 		enemy.EnemyParent.Despawn();
@@ -279,9 +300,9 @@ public class EnemyStoneBaneAnim : MonoBehaviour
 		SfxDelayAttack();
 	}
 
-	public void Attack()
+	public void HandSwingAttack()
 	{
-		attackLogic.StateSet(StoneBaneAttackLogic.StoneBaneAttackState.smash);
+		Debug.Log("Im the attacking animation fuah fuah fuah fuah");
 	}
 
 	public void SfxDelayAttack()
