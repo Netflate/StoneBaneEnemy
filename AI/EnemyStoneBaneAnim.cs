@@ -20,6 +20,8 @@ public class EnemyStoneBaneAnim : MonoBehaviour
 	private int animChargeAttack = Animator.StringToHash("ChargeAttack");
 
 	private int animDelayAttack = Animator.StringToHash("DelayAttack");
+	
+	private int animHandSwing = Animator.StringToHash("HandSwing");
 
 	private int animAttack = Animator.StringToHash("Attack");
 
@@ -165,6 +167,7 @@ public class EnemyStoneBaneAnim : MonoBehaviour
 		{
 			if (stunImpulse)
 			{
+				Debug.Log("Im here stunned yo");
 				animator.SetTrigger(animStun);
 				stunImpulse = false;
 			}
@@ -182,6 +185,7 @@ public class EnemyStoneBaneAnim : MonoBehaviour
 		{
 			if (noticeImpulse)
 			{
+				Debug.Log("Im here notice");
 				animator.SetTrigger(animNotice);
 				noticeImpulse = false;
 			}
@@ -239,6 +243,11 @@ public class EnemyStoneBaneAnim : MonoBehaviour
 		}
 	}
 
+	public void OnHandSwing()
+	{
+		animator.SetTrigger(animHandSwing);
+	}
+	
 	public void OnSpawn()
 	{
 		animator.Play("Spawn", 0, 0f);

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Netflate")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5ece9001751953f1e10f1fe1a8583a744147a453")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dfa4bebd0e6c2487386e02396712e07b48956c3e")]
 [assembly: System.Reflection.AssemblyProductAttribute("StoneBaneEnemy")]
 [assembly: System.Reflection.AssemblyTitleAttribute("StoneBaneEnemy")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

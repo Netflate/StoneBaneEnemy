@@ -159,7 +159,7 @@ public class EnemyStoneBane : MonoBehaviour
 					CameraGlitch.Instance.PlayLong();
 				}
 				attackImpulse = false;
-				animator.animator.SetTrigger("Attack");
+				animator.OnHandSwing();
 			}
 		}
 		else
@@ -351,6 +351,7 @@ public class EnemyStoneBane : MonoBehaviour
 		}
 		else if (Vector3.Distance(feetTransform.position, enemy.NavMeshAgent.GetPoint()) < 2f || enemy.OnScreen.OnScreenAny)
 		{
+			Debug.Log("this notice1 get triggerd");
 			UpdateState(State.Notice);
 		}
 	}
@@ -398,7 +399,7 @@ public class EnemyStoneBane : MonoBehaviour
 		if (stateTimer <= 0f)
 		{
 			Debug.Log("I'm attacking fuah fuah fuah");
-			animator.animator.SetTrigger("HandSwinging");
+			animator.animator.SetTrigger("HandSwing");
 			if (attacks >= 3 || Random.Range(0f, 1f) <= 0.1f)
 			{
 				attacks = 0;
@@ -548,7 +549,8 @@ public class EnemyStoneBane : MonoBehaviour
 				UpdateState(State.Sneak);
 			}
 			else
-			{
+			{			
+				Debug.Log("this notice2 get triggerd");
 				UpdateState(State.Notice);
 			}
 			if (GameManager.Multiplayer())
